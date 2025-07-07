@@ -1,0 +1,42 @@
+<form (ngSubmit)="submit()" [formGroup]="testForm">
+    <div>
+        <label for="city">Cidade</label>
+        <input type="text" placeholder="Digite sua cidade" formControlName="city" required>
+        <div *ngIf="city.invalid && (city?.dirty || city?.touched)">
+            <p *ngIf="city.errors?.['required']">A cidade é obrigatória</p>
+        </div>
+    </div>
+    
+    <div>
+        <label for="">Bairro</label>
+        <input type="text" placeholder="Digite o bairro" formControlName="bairro" required>
+        <div *ngIf="bairro.invalid && (bairro?.dirty || bairro?.touched)">
+            <p *ngIf="bairro.errors?.['required']">O bairro é obrigatório</p>
+        </div>
+    </div>
+
+    <div>
+        <label for="">Logradouro</label>
+        <input type="text" placeholder="Digite o logradouro" formControlName="logradouro" required>
+        <div *ngIf="logradouro.invalid && (logradouro?.dirty || logradouro?.touched)">
+            <p *ngIf="logradouro.errors?.['required']">O logradouro é obrigatório</p>
+        </div>
+    </div>
+
+    <div *ngIf="show">
+        <div>
+            <label for="">Número</label>
+            <input type="text" placeholder="Digite o número" formControlName="number" required>
+            <div *ngIf="number.invalid && (number?.dirty || number?.touched)">
+                <p *ngIf="number.errors?.['required']">O número é obrigatório</p>
+            </div>
+        </div>
+
+        <div>
+            <label for="">Complemento</label>
+            <input type="text" placeholder="Digite o complemento" formControlName="complemento">
+        </div>
+    </div>
+    
+    <input type="submit" value="Avançar">
+</form>
