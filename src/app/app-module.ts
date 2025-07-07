@@ -3,10 +3,12 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Formulario } from './components/formulario/formulario';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Formulario
   ],
   imports: [
     BrowserModule,
