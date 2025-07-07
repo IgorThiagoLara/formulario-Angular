@@ -39,7 +39,7 @@ export class Formulario {
     return this.testForm.get('number')!;
   }
 
-  get complement(){
+  get complemento(){
     return this.testForm.get('complemento')!;
   }
 
