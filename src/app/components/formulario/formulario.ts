@@ -55,6 +55,10 @@ export class Formulario {
 
     this.show = true;
 
-    console.log("Formulário enviado!");
+    if(!this.number.invalid){
+      alert("Formulário enviado com sucesso");
+      console.log("Formulário enviado!");
+      window.location.reload();
+    }
   }
 }
